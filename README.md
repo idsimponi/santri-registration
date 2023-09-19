@@ -8,7 +8,7 @@
 </p>
 
 ## Santri Registration Project
-## Project Description
+- Project Description :
 This project introduces a modern Santri registration system that amalgamates contemporary functionalities with a user-friendly interface. Focused on user convenience, the system facilitates the efficient collection of Santri data, ensuring a smooth and hassle-free process throughout.
 
 ## Main Features
