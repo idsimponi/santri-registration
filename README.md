@@ -29,10 +29,10 @@ This project introduces a modern Santri registration system that amalgamates con
  - SweetAlert2: Utilized to showcase attractive and informative notifications.
 
 ## Installation and Usage
-Clone this GitHub repository.
-Install dependencies by running composer install.
-Set up the database and initiate migrations with 'php artisan migrate'.
-Start the server with php artisan serve and visit http://127.0.0.1:8000 to access the application.
+ - Clone this GitHub repository.
+ - Install dependencies by running composer install.
+ - Set up the database and initiate migrations with 'php artisan migrate'.
+ - Start the server with php artisan serve and visit http://127.0.0.1:8000 to access the application.
 
 ## License
 
