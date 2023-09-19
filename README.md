@@ -6,6 +6,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+<p align="center">
+  <a href="https://laravel-livewire.com/" target="_blank">
+    <img src="https://laravel-livewire.com/img/twitter.png" width="400" alt="Livewire Logo">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://alpinejs.dev/" target="_blank">
+    <img src="https://alpinejs.dev/start-here/alpinejs.png" width="400" alt="AlpineJS Logo">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://getbootstrap.com/" target="_blank">
+    <img src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo-shadow.png" width="400" alt="Bootstrap 5 Logo">
+  </a>
+</p>
 
 ## Santri Registration Project
 - Project Description :
