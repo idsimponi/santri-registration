@@ -42,11 +42,11 @@ class Register extends Component
     public function updatedCabang($value)
     {
         $this->programs = Program::where('cabang_id', $value)->get();
-        
+
         // Memperbarui visibilitas field "Program IDN" berdasarkan apakah field "Cabang" terisi
         $this->showProgramIDN = filled($value);
     }
-    
+
     public function updatedProgram($program)
     {
         $this->checkQuota();
@@ -54,9 +54,9 @@ class Register extends Component
 
     public function updatedBuktiTransfer()
     {
-        $this->namaFile = $this->buktiTransfer->getClientOriginalName();
+        $this->namaFile = time().'.'.$this->buktiTransfer->extension();
     }
-    
+
     public function checkQuota()
     {
 
@@ -68,8 +68,8 @@ class Register extends Component
 
             if ($quotaAvailable <= 0) {
                 $this->dispatchBrowserEvent('show-swal', [
-                    'type' => 'error', 
-                    'title' => 'Kuota Terpenuhi!', 
+                    'type' => 'error',
+                    'title' => 'Kuota Terpenuhi!',
                     'text' => "Kuota untuk {$selectedProgram->name} di {$selectedCabang->name} sudah penuh, silahkan pilih program yang lain"
                 ]);
                 $this->isButtonDisabled = true;
@@ -102,8 +102,7 @@ class Register extends Component
             'jenis_kelamin' => $this->jenisKelamin,
             'cabang_id' => $this->cabang,
             'program_id' => $this->program,
-            'bukti_transfer' => $this->buktiTransfer->store('transfers'), // menyimpan path file ke database
-            
+            'bukti_transfer' => $this->buktiTransfer->storeAs('bukti-transfer', $this->namaFile, 'public'), // menyimpan path file ke database
         ]);
 
         // Mengurangi kuota setelah pendaftaran berhasil
@@ -117,10 +116,11 @@ class Register extends Component
 
         $this->resetForm();
         $this->isRegistered = true;
-        
+
         // Tampilkan notifikasi sukses
         session()->flash('registrationSuccess', true);
     }
+
     public function resetForm()
     {
         $this->username = '';
@@ -132,7 +132,7 @@ class Register extends Component
         $this->buktiTransfer = null;
         $this->photo = null;
     }
-    
+
     protected $rules = [
         'username' => 'required|string|email|unique:santris',
         'password' => 'required|string|min:8',
@@ -150,7 +150,7 @@ class Register extends Component
 
     public function getIsFormValidProperty()
     {
-        return 
+        return
             filled($this->username) &&
             filled($this->password) &&
             filled($this->namaSantri) &&
@@ -185,7 +185,7 @@ class Register extends Component
 
     public function render()
     {
-        return view('livewire.register'); 
+        return view('livewire.register');
     }
 
 }

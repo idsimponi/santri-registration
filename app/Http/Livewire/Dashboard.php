@@ -2,16 +2,17 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Santri;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Component
 {
-    public $santriName;
+    public $dataPribadi;
 
     public function mount()
     {
-        $this->santriName = Auth::user()->nama_santri;
+        $this->dataPribadi = Santri::where('username', Auth::user()->username)->first();
     }
 
     public function render()

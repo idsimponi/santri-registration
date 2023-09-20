@@ -156,7 +156,7 @@
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <label class="custom-file-label" for="exampleInputFile"> {{ $namaFile ?? 'Pilih File' }}</label>
+                            <label class="custom-file-label" for="exampleInputFile"> {{ $namaFile ?? 'Pilih File Saja' }}</label>
                         </div>
                         @error('buktiTransfer')
                             <div class="invalid-feedback">

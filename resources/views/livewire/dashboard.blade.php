@@ -10,5 +10,7 @@
         })
     </script>
     @endif
-    <h1>Selamat datang, {{ $santriName }}</h1>
+    <h1>Selamat datang, {{ $dataPribadi->nama_santri }}</h1> <br>
+    Upload Bukti Transfer <br>
+    <img src="{{ asset('storage/'.$dataPribadi->bukti_transfer) }}" width="600" height="auto">
 </div>

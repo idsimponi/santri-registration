@@ -1,5 +1,5 @@
 <div>
-    
+
     <div class="login-box">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
@@ -50,7 +50,7 @@
                 </form>
                 <!-- /.social-auth-links -->
 
-  
+
                 <p class="mb-1">
                     <a href="{{ route('register') }}" class="text-center">Daftar baru</a>
                 </p>
